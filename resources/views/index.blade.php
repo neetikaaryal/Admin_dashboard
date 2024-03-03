@@ -5,26 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin Dashboard</title>
 
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
+  <!--imp Font Awesome -->
   <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css')}}">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- Tempusdominus Bootstrap 4 -->
-  <link rel="stylesheet" href="{{ asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="{{ asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
-  <!-- JQVMap -->
-  <link rel="stylesheet" href="{{ asset('plugins/jqvmap/jqvmap.min.css')}}">
-  <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css')}}">
-  <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="{{ asset('plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="{{ asset('plugins/daterangepicker/daterangepicker.css')}}">
-  <!-- summernote -->
-  <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.min.css')}}">
+ <!-- Tempusdominus Bootstrap 4 -->
+  <!-- <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"> -->
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -48,7 +33,7 @@
         <a href="#" class="nav-link">Contact</a>
       </li>
     </ul>
-
+</nav>
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
@@ -86,34 +71,23 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Dashboard
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
+        
 
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
+              <i class="right fas fa-angle-left"></i>
               <p>
                 Users
-                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
-                  <i class="nav-icon fas fa-edit"></i>
-                  <p>User-list</p>
-                </a>
+                <a href="{{route('user_page')}}" class="nav-link">
+                  <i class="nav-icon fas fa-edit">User-list</i></a>
               </li>
-              
             </ul>
           </li>
-          
+  </aside>     
                          
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -133,8 +107,41 @@
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
-               
-            
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        
+                                                
+            <!-- TO DO List -->
+            <div class="card">
+              
+              <!-- /.card-header -->
+              <div class="card-body">
+                
+                    @yield('content')
+                    
+              </div>
+              <!-- /.card-body -->
+             
+            </div>
+            <!-- /.card -->
+          </section>
+          <!-- /.Left col -->
+          <!-- right col (We are only adding the ID to make the widgets sortable)-->
+          
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </section>
+          <!-- right col -->
+        </div>
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>

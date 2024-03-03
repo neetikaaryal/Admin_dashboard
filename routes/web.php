@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,3 +20,7 @@ Route::get('/', function () {
 
 // Route::get('/index', 'AdminController@index');
 Route::get('/index', [AdminController::class, 'index']);
+
+Route::get('/user_page', [UserController::class, 'user'])->name('user_page');
+Route::get('/add_user', [UserController::class, 'create'])->name('add_user');
+Route::post('store-user', [UserController::class, 'store'])->name('store-user');
