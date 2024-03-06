@@ -14,13 +14,10 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-// Route::get('/index', 'AdminController@index');
-Route::get('/index', [AdminController::class, 'index']);
+Route::get('/', [AdminController::class, 'index']);
 
 Route::get('/user_page', [UserController::class, 'user'])->name('user_page');
 Route::get('/add_user', [UserController::class, 'create'])->name('add_user');
 Route::post('store-user', [UserController::class, 'store'])->name('store-user');
+Route::get('/delete-user/{id}', [UserController::class, 'delete'])->name('delete-user');

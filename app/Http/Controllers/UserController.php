@@ -9,7 +9,8 @@ class UserController extends Controller
 {
     public function user()
     {
-        return view('user_page');
+        $customer = Customer::all();
+        return view('user_page', compact('customer'));
     }
 
     public function create()
@@ -23,5 +24,17 @@ class UserController extends Controller
          $customer->about = $request->about;
             $customer->save();
             return redirect('user_page');
+    }
+    public function delete($id)
+    {
+        $customer = Customer::find($id);
+        $customer->delete();
+        return redirect ('user_page');
+    }
+    //API
+    public function apiIndex()
+    {
+        $customer = Customer::all();
+        return response()->json($customer);
     }
 }

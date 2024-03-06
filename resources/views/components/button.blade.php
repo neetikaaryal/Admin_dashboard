@@ -1,3 +1,3 @@
 <div>
-    <button type="submit" class="btn btn-primary">{{$name}}</button>
+    <button type="submit" class="btn {{$class}}">{{$name}}</button>
 </div>

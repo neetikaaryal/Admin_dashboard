@@ -12,10 +12,11 @@ class Button extends Component
      * @return void
      */
     public $name; 
-    
-    public function __construct($name)
+    public $class;
+    public function __construct($name, $class = 'btn-primary')
     {
         $this->name = $name;
+        $this->class = $class;
     }
 
     /**
