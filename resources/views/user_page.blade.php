@@ -17,13 +17,15 @@
         <tr>
             <th>Name</th>
             <th>About</th>
+            <th>Image</th>
             <th>Action</th>
         </tr>
         @foreach($customer as $user)
         <tr>
             <td>{{$user->name}}</td>
             <td>{{$user->about}}</td>
-            <td style="display:flex;">
+            <td><img src="{{ asset('storage/'.$user->image) }}" ></td>
+            <td style=" display:flex;">
                 <x-button name="edit" />
                 <a href="{{route('delete-user', $user->id)}}"><x-button name="delete" class="btn-danger" /></a>
             </td>

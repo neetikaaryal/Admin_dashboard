@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\FrontendController\PortfolioController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,3 +22,6 @@ Route::get('/user_page', [UserController::class, 'user'])->name('user_page');
 Route::get('/add_user', [UserController::class, 'create'])->name('add_user');
 Route::post('store-user', [UserController::class, 'store'])->name('store-user');
 Route::get('/delete-user/{id}', [UserController::class, 'delete'])->name('delete-user');
+
+//......portfolio...//
+Route::get('frontend/portfolio', [PortfolioController::class, 'portfolio']);

@@ -17,21 +17,29 @@ class UserController extends Controller
     {
         return view('add_user');
     }
+
     public function store(Request $request)
     {
          $customer = new Customer;
          $customer->name = $request->name;
          $customer->about = $request->about;
-            $customer->save();
-            return redirect('user_page');
+
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('images', 'public');
+            $customer->image = $path;
+        }
+        
+         $customer->save();
+         return redirect('user_page');
     }
+
     public function delete($id)
     {
         $customer = Customer::find($id);
         $customer->delete();
-        return redirect ('user_page');
+        return redirect ('user_page'); 
     }
-    //API
+    //..............API...................//
     public function apiIndex()
     {
         $customer = Customer::all();
