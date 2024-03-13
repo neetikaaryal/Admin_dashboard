@@ -10,7 +10,12 @@ class PortfolioController extends Controller
 {
     public function portfolio()
     {
-        $customer = Customer::where('name', 'Neetika Aryal')->skip(1)->first();
+        $customer = Customer::where('name', 'sam')->first();
         return view('frontend/portfolio', compact('customer'));
+    }
+    
+    public function contact()
+    {
+        return view('frontend/contact');
     }
 }
