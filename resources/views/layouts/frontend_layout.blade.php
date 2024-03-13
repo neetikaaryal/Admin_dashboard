@@ -8,6 +8,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -37,7 +38,7 @@
             <h1 id="colorlib-logo"><a href="index.html">Neetika<span>.</span></a></h1>
             <nav id="colorlib-main-menu" role="navigation">
                 <ul>
-                    <li class="{{ Request::is('frontend.portfolio') ? 'colorlib-active' : '' }}"><a href="{{ route('portfolio') }}">About</a></li>
+                    <li class="{{ Request::is('portfolio*') ? 'colorlib-active' : '' }}"><a href="{{ route('portfolio') }}">About</a></li>
                     <li class="{{ Request::is('/') ? 'colorlib-active' : '' }}"><a href="about.html">Experience</a></li>
                     <li class="{{ Request::is('/') ? 'colorlib-active' : '' }}"><a href="fashion.html">Projects</a></li>
                     <li class="{{ Request::is('contact') ? 'colorlib-active' : '' }}"><a href="{{ route('contact') }}">Contact</a></li>
@@ -50,10 +51,12 @@
                         document.write(new Date().getFullYear());
                     </script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                 <ul>
-                    <li><a href="#"><i class="icon-facebook"></i></a></li>
-                    <li><a href="#"><i class="icon-twitter"></i></a></li>
-                    <li><a href="#"><i class="icon-instagram"></i></a></li>
-                    <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
                 </ul>
             </div>
         </aside> <!-- END COLORLIB-ASIDE -->

@@ -18,13 +18,19 @@
             <th>Name</th>
             <th>About</th>
             <th>Image</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Email</th>
             <th>Action</th>
         </tr>
         @foreach($customer as $user)
         <tr>
             <td>{{$user->name}}</td>
             <td>{{$user->about}}</td>
-            <td><img src="{{ asset('storage/'.$user->image) }}" ></td>
+            <td><img src="{{ asset('storage/'.$user->image) }}"></td>
+            <td>{{$user->address}}</td>
+            <td>{{$user->phone}}</td>
+            <td>{{$user->email}}</td>
             <td style=" display:flex;">
                 <x-button name="edit" />
                 <a href="{{route('delete-user', $user->id)}}"><x-button name="delete" class="btn-danger" /></a>

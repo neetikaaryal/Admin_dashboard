@@ -16,7 +16,7 @@ class InputField extends Component
     public $type;
     public $required;
 
-    public function __construct($name, $label, $type, $required)
+    public function __construct($name, $label, $type, $required = false)
     {
         $this->name = $name;
         $this->label = $label;

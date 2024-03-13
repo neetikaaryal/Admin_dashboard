@@ -23,6 +23,9 @@ class UserController extends Controller
          $customer = new Customer;
          $customer->name = $request->name;
          $customer->about = $request->about;
+         $customer->email = $request->email;
+         $customer->phone = $request->phone;
+         $customer->address = $request->address;
 
         if ($request->hasFile('image')) {
             $path = $request->file('image')->store('images', 'public');
