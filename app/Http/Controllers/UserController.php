@@ -42,6 +42,13 @@ class UserController extends Controller
         $customer->delete();
         return redirect ('user_page'); 
     }
+
+    public function edit($id)
+    {
+        $customer = Customer::find($id);
+        return view('edit_user', compact('customer'));
+    
+    }
     //..............API...................//
     public function apiIndex()
     {

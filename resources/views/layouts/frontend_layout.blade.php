@@ -39,8 +39,8 @@
             <nav id="colorlib-main-menu" role="navigation">
                 <ul>
                     <li class="{{ Request::is('portfolio*') ? 'colorlib-active' : '' }}"><a href="{{ route('portfolio') }}">About</a></li>
-                    <li class="{{ Request::is('/') ? 'colorlib-active' : '' }}"><a href="about.html">Experience</a></li>
-                    <li class="{{ Request::is('/') ? 'colorlib-active' : '' }}"><a href="fashion.html">Projects</a></li>
+                    <li class="{{ Request::is('/') ? 'colorlib-active' : '' }}"><a href="{{route('experience')}}">Experience</a></li>
+                    <li class="{{ Request::is('/') ? 'colorlib-active' : '' }}"><a href="{{route('projects')}}">Projects</a></li>
                     <li class="{{ Request::is('contact') ? 'colorlib-active' : '' }}"><a href="{{ route('contact') }}">Contact</a></li>
                 </ul>
             </nav>

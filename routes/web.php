@@ -22,7 +22,10 @@ Route::get('/user_page', [UserController::class, 'user'])->name('user_page');
 Route::get('/add_user', [UserController::class, 'create'])->name('add_user');
 Route::post('store-user', [UserController::class, 'store'])->name('store-user');
 Route::get('/delete-user/{id}', [UserController::class, 'delete'])->name('delete-user');
+Route::get('/edit-user/{id}', [UserController::class, 'edit'])->name('edit-user');
 
 //......portfolio...//
 Route::get('frontend/portfolio', [PortfolioController::class, 'portfolio'])->name('portfolio');
 Route::get('frontend/contact', [PortfolioController::class, 'contact'])->name('contact');
+Route::get('frontend/experience', [PortfolioController::class, 'experience'])->name('experience');
+Route::get('frontend/projects', [PortfolioController::class, 'projects'])->name('projects');

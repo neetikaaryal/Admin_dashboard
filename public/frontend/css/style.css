@@ -8541,3 +8541,21 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+        .experience {
+          font-family: Arial, sans-serif;
+          color: #333;
+          padding: 20px;
+          background-color: #f9f9f9;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          width: 95%;
+          /* Adjust as needed */
+          height: 95vh;
+          /* Adjust as needed */
+          margin: auto;
+          /* Centers the element if it has a width less than 100% */
+        }
+    
+      
+       

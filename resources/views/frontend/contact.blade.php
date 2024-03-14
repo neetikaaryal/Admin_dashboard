@@ -16,7 +16,7 @@
 				<div class="col-md-3">
 					<p><span>Phone:</span> <a href="tel://1234567920">{{$customer->phone}}</a></p>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-3">	`
 					<p><span>Email:</span> <a href="mailto:info@yoursite.com">{{$customer->email}}</a></p>
 				</div>
 				<!-- <div class="col-md-3">
