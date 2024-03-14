@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Customer;
+use Illuminate\Support\Str;
 
 class UserController extends Controller
 {
@@ -26,7 +27,7 @@ class UserController extends Controller
          $customer->email = $request->email;
          $customer->phone = $request->phone;
          $customer->address = $request->address;
-
+        $customer->slug = Str::slug($request->name, '');
         if ($request->hasFile('image')) {
             $path = $request->file('image')->store('images', 'public');
             $customer->image = $path;

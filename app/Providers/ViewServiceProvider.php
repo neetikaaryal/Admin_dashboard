@@ -26,7 +26,8 @@ class ViewServiceProvider extends ServiceProvider
     public function boot()
     {
         View::composer('layouts.frontend_layout', function ($view) {
-            $customer = Customer::latest()->first();
+            $slug = request()->route('slug');
+            $customer = Customer::where('slug', $slug)->first();
             $view->with('customer', $customer);
         });
     }

@@ -25,7 +25,7 @@ Route::get('/delete-user/{id}', [UserController::class, 'delete'])->name('delete
 Route::get('/edit-user/{id}', [UserController::class, 'edit'])->name('edit-user');
 
 //......portfolio...//
-Route::get('frontend/portfolio', [PortfolioController::class, 'portfolio'])->name('portfolio');
-Route::get('frontend/contact', [PortfolioController::class, 'contact'])->name('contact');
-Route::get('frontend/experience', [PortfolioController::class, 'experience'])->name('experience');
-Route::get('frontend/projects', [PortfolioController::class, 'projects'])->name('projects');
+Route::get('frontend/portfolio/{slug}', [PortfolioController::class, 'portfolio'])->name('portfolio');
+Route::get('frontend/contact/{slug}', [PortfolioController::class, 'contact'])->name('contact');
+Route::get('frontend/experience/{slug}', [PortfolioController::class, 'experience'])->name('experience');
+Route::get('frontend/projects/{slug}', [PortfolioController::class, 'projects'])->name('projects');
