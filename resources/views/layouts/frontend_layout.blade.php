@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Explorer - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Portfolio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -35,7 +35,7 @@
     <div id="colorlib-page">
         <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         <aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
-            <h1 id="colorlib-logo"><a href="index.html">Neetika<span>.</span></a></h1>
+            <h1 id="colorlib-logo"><a href="index.html">{{ $customer->name }}<span>.</span></a></h1>
             <nav id="colorlib-main-menu" role="navigation">
                 <ul>
                     <li class="{{ Request::is('portfolio*') ? 'colorlib-active' : '' }}"><a href="{{ route('portfolio') }}">About</a></li>
