@@ -42,3 +42,7 @@ Route::post('store-project', [ProjectController::class, 'store'])->name('store-p
 Route::get('experience_list', [ExperienceController::class, 'experience'])->name('experience_list');
 Route::get('add_experience_list', [ExperienceController::class, 'create'])->name('add_experience_list');
 Route::post('store-experience', [ExperienceController::class, 'store'])->name('store-experience');
+
+
+//test
+Route::get('ticket', [AdminController::class, 'ticket'])->name('ticket');
